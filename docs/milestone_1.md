@@ -4,6 +4,8 @@
 
 Implement the producer side of the CloudCart event-driven order processing system.
 
+The goal of this milestone is to receive an e-commerce order, validate it, generate order metadata, and asynchronously send the order to an Amazon SQS queue.
+
 ## Architecture
 
 Client/Test Event

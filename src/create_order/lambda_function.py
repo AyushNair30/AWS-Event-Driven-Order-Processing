@@ -15,7 +15,10 @@ QUEUE_URL = os.environ["QUEUE_URL"]
 def lambda_handler(event, context):
 
     # Extract order data
-    order = event
+    if "body" in event:
+        order = json.loads(event["body"])
+    else:
+        order = event
 
     # Validate required fields
     required_fields = [
